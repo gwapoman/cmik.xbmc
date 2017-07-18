@@ -529,7 +529,7 @@ def getSiteMenu():
     import re
     data = []
     
-    html = callServiceApi('', base_url = websiteUrl)
+    html = callServiceApi('/', base_url = websiteUrl)
     menu = common.parseDOM(html, "div", attrs = { 'id' : 'main_nav_desk' })[0]
     categories = common.parseDOM(menu, "li", attrs = { 'class' : 'has_children' })
     
@@ -576,7 +576,7 @@ def getSubCategories(categoryId):
 
 def getWebsiteHomeSections():
     data = []
-    html = callServiceApi('', base_url = websiteUrl)
+    html = callServiceApi('/', base_url = websiteUrl)
     sections = common.parseDOM(html, "div", attrs = { 'class' : 'main-container-xl main-container-xl-mobile' })
     i = 1
     for section in sections:
@@ -593,7 +593,7 @@ def getWebsiteSectionContent(sectionId, page=1, itemsPerPage=8):
     page -= 1
     data = []
     
-    html = callServiceApi('', base_url = websiteUrl)
+    html = callServiceApi('/', base_url = websiteUrl)
     sections = common.parseDOM(html, "div", attrs = { 'class' : 'main-container-xl main-container-xl-mobile' })
     section = sections[int(sectionId) - 1]
     links = common.parseDOM(section, "a", attrs = { 'data-category' : 'CTA_Sections' }, ret = 'href')
@@ -1074,7 +1074,7 @@ def login(quiet=False):
     return signedIntoWebsite
     
 def isLoggedIn():
-    html = callServiceApi('', useCache = False)
+    html = callServiceApi('/', useCache = False)
     return False if 'TfcTvId' not in html else True
     
 def loginToWebsite(quiet=False):
