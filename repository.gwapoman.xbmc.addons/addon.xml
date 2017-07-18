@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.gwapoman.xbmc.addons" name="TFC" version="0.1.1" provider-name="gwapoman">
+    <extension point="xbmc.addon.repository" name="TFC">
+        <info compressed="false">http://github.com/gwapoman/cmik.xbmc/raw/releases/addons.xml</info>
+        <checksum>http://github.com/gwapoman/cmik.xbmc/raw/releases/addons.xml.md5</checksum>
+        <datadir zip="true">http://github.com/gwapoman/cmik.xbmc/raw/releases/downloads</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">TFC Kodi Repo</summary>
+        <description lang="en">Install XBMC Kodi Plugins</description>
+        <disclaimer lang="en">No warranty here</disclaimer>
+        <language>en</language>
+        <platform>all</platform>
+        <licence>GNU</licence>
+    </extension>
+</addon>
